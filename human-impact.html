@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Human Impact - AI-Powered Social Media Moderation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+  /* Interview visibility upgrade (Discord-like transcript + reveal) */
+  /* === Ethical Verdict Highlight === */
+#features {
+  position: relative;
+  margin-top: 6rem;
+  padding: 5rem 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 12, 18, 0) 0%,
+    rgba(10, 12, 18, 0.85) 20%,
+    rgba(10, 12, 18, 0.95) 100%
+  );
+}
+
+#features::before {
+  content: "ETHICAL VERDICT";
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  font-size: 0.8rem;
+  color: rgba(255, 80, 80, 0.85);
+}
+
+#features .wrap > h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#features .grid3 {
+  gap: 2rem;
+}
+
+#features .card {
+  position: relative;
+  padding: 2.2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#features .card::before {
+  content: "FINDING";
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  color: rgba(255, 120, 120, 0.9);
+}
+
+#features .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+#features h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.35rem;
+}
+
+#features p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+#moderator-interview .wrap { max-width: 980px; }
+
+  .cwCard {
+    border-radius: 18px;
+    padding: 18px 18px 16px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(0,0,0,.35);
+    backdrop-filter: blur(8px);
+    margin-top: 14px;
+  }
+
+  .cwTop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cwPill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 70, 70, .15);
+    border: 1px solid rgba(255, 70, 70, .35);
+    font-weight: 600;
+    letter-spacing: .2px;
+  }
+
+  .cwMeta {
+    opacity: .85;
+    font-size: .95rem;
+  }
+
+  details.transcript {
+    margin-top: 12px;
+  }
+
+  details.transcript > summary {
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.06);
+    font-weight: 600;
+    transition: transform .15s ease, background .15s ease;
+  }
+  details.transcript > summary:hover { transform: translateY(-1px); background: rgba(255,255,255,.09); }
+  details.transcript > summary::-webkit-details-marker { display:none; }
+
+  .logFrame {
+    margin-top: 14px;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(10, 12, 18, .70);
+  }
+
+  .logHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.04);
+    font-size: .95rem;
+  }
+
+  .logHeader .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(255,70,70,.9);
+    box-shadow: 0 0 12px rgba(255,70,70,.55);
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(90, 150, 255, .35);
+    background: rgba(90, 150, 255, .12);
+    font-weight: 600;
+    font-size: .9rem;
+  }
+
+  .logBody {
+    padding: 16px 14px 18px;
+  }
+
+  .msg {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .avatar {
+    width: 44px; height: 44px;
+    border-radius: 14px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.10);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+  }
+
+  .bubble {
+    border-radius: 16px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.06);
+  }
+
+  .nameLine {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+    font-size: .95rem;
+  }
+
+  .nameLine .who { font-weight: 700; }
+  .nameLine .time { opacity: .7; font-size: .85rem; }
+
+  .badgeMod {
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .3px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(255, 210, 90, .14);
+    border: 1px solid rgba(255, 210, 90, .35);
+  }
+
+  .systemMsg {
+    margin: 12px 0;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px dashed rgba(255,255,255,.18);
+    background: rgba(255,255,255,.04);
+    opacity: .9;
+    font-size: .95rem;
+  }
+
+  .impact-quote {
+    margin: 16px 0 0;
+    padding: 14px 16px;
+    border-left: 4px solid rgba(90,150,255,.9);
+    background: rgba(90,150,255,.10);
+    border-radius: 12px;
+    font-weight: 600;
+  }
+</style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <div class="inner">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="human-impact.html">Human Impact</a>
+        <a href="ai-benefits.html">AI Benefits</a>
+        <a href="ethical-challenges.html">Ethical Challenges</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true">
+    <span id="bar"></span>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="wrap heroGrid">
+      <div>
+        <div class="eyebrow">2026 • New</div>
+        <h1>Human Impact of AI-Powered Content Moderation</h1>
+        <p class="sub">
+          Behind every “safe platform” there are humans exposed to content no one should see.
+        </p>
+      </div>
+      <div class="mock" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Context Section -->
+  <section id="human-impact-details">
+    <div class="wrap">
+      <h2>Exploring the Human Cost</h2>
+
+      <p>
+        Content moderators on social media platforms are frequently exposed to extreme material:
+        violence, abuse, self-harm, and death. This exposure is not occasional — it is constant,
+        systematic, and often invisible to the users they protect.
+      </p>
+
+      <p>
+        Numerous studies and testimonies reveal that moderators may develop symptoms similar to
+        Post-Traumatic Stress Disorder (PTSD), anxiety, emotional numbness, and chronic stress.
+      </p>
+
+      <p>
+        To move beyond statistics, it is necessary to listen to the people behind the screens.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interview Section -->
+  <section id="moderator-interview">
+  <div class="wrap">
+    <h2>A Conversation Behind the Screen</h2>
+
+    <p class="intro">
+      To understand the real human cost of moderation, I spoke with a close friend.
+      He moderates several large Discord servers. This is a transcript-style reconstruction.
+    </p>
+
+    <div class="cwCard">
+      <div class="cwTop">
+        <div class="cwPill"><i class="fas fa-exclamation-triangle"></i> Content Warning</div>
+        <div class="cwMeta">Mentions of violence, self-harm, and disturbing content (no graphic detail).</div>
+      </div>
+
+      <p class="cwMeta" style="margin:0;">
+        Most readers skim. Don’t. This is what “keeping communities safe” can look like when a human has to absorb the worst of it.
+      </p>
+
+      <details class="transcript">
+        <summary><i class="fas fa-eye"></i> Reveal the transcript (Discord log)</summary>
+
+        <div class="logFrame" role="region" aria-label="Discord-style transcript">
+          <div class="logHeader">
+            <div class="left">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="tag"><i class="fab fa-discord"></i> #mod-room</span>
+            </div>
+            <span style="opacity:.75;"><i class="fas fa-lock"></i> Private channel</span>
+          </div>
+
+          <div class="logBody">
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">ME</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">Me</span>
+                  <span class="time">21:13</span>
+                </div>
+                <div>
+                  People think moderating is deleting spam. Is it really that simple?
+                </div>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">MOD</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">My friend</span>
+                  <span class="badgeMod">MOD</span>
+                  <span class="time">21:14</span>
+                </div>
+                <div>
+                  That’s the version platforms want you to believe.
+                  Spam is relaxing. The real stuff is… training your brain to look at things it rejects.
+                </div>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">ME</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">Me</span>
+                  <span class="time">21:15</span>
+                </div>
+                <div>
+                  What do you mean “look at things it rejects”?
+                </div>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">MOD</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">My friend</span>
+                  <span class="badgeMod">MOD</span>
+                  <span class="time">21:16</span>
+                </div>
+                <div>
+                  You don’t get to glance and move on. You verify.
+                  You replay. You zoom. You collect evidence.
+                  If you remove content without certainty, you get dragged.
+                  If you leave it up, you’re “letting people get hurt.”
+                </div>
+              </div>
+            </div>
+
+            <div class="systemMsg">
+              <i class="fas fa-info-circle"></i>
+              SYSTEM NOTE: Moderation decisions are rarely “clean”. Every choice has a victim — the user, the community, or the moderator.
+            </div>
+
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">ME</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">Me</span>
+                  <span class="time">21:18</span>
+                </div>
+                <div>
+                  Does it mess with you after?
+                </div>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">MOD</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">My friend</span>
+                  <span class="badgeMod">MOD</span>
+                  <span class="time">21:19</span>
+                </div>
+                <div>
+                  The cruelty is that you’re expected to be fine.
+                  If you’re not, you’re replaceable.
+                  You either numb yourself… or you break slowly.
+                </div>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">ME</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">Me</span>
+                  <span class="time">21:21</span>
+                </div>
+                <div>
+                  Why keep doing it then?
+                </div>
+              </div>
+            </div>
+
+            <div class="msg">
+              <div class="avatar" aria-hidden="true">MOD</div>
+              <div class="bubble">
+                <div class="nameLine">
+                  <span class="who">My friend</span>
+                  <span class="badgeMod">MOD</span>
+                  <span class="time">21:22</span>
+                </div>
+                <div>
+                  Because the system won’t stop. It just finds a new pair of eyes.
+                  If AI can block even part of it before it hits a human… that matters.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <blockquote class="impact-quote">
+          “You don’t get traumatized by accident. You get traumatized because it’s your job.”
+        </blockquote>
+
+        <p class="closing" style="margin-top:14px;">
+          This format is intentional: it resembles how these conversations really happen — late, quickly, in private channels —
+          while the public sees only the final outcome: “content removed”.
+        </p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Feature Summary -->
+  <section id="features">
+    <div class="wrap">
+      <div class="grid3">
+        <div class="card">
+          <h3>Invisible Labor</h3>
+          <p>Moderation work is essential, yet rarely acknowledged by platforms or users.</p>
+        </div>
+        <div class="card">
+          <h3>Psychological Risk</h3>
+          <p>Repeated exposure to extreme content can permanently affect mental health.</p>
+        </div>
+        <div class="card">
+          <h3>Ethical Responsibility</h3>
+          <p>Technology must reduce harm — not merely relocate it to unseen workers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      This project examines the ethical implications of AI-powered moderation and the human cost behind digital safety.
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

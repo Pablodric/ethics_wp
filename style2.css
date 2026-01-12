@@ -1,0 +1,611 @@
+/* Global Variables */
+:root {
+  --bg-dark: #0a0a0a;
+  --fg-light: #f0f0f0;
+  --primary-color: #00bcd4; /* Color más suave */
+  --hover-color: #0097a7;
+  --muted-color: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --radius: 16px;
+  --max-width: 1120px;
+  --nav-height: 56px;
+  --cta-height: 48px;
+  --padding: 20px;
+  --margins: 0 20px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--fg-light);
+  overflow-x: hidden;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(5, 6, 8, 0.75);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.nav .inner {
+  width: min(var(--max-width), 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.navlinks a {
+  text-decoration: none;
+  color: var(--fg-light);
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.navlinks a:hover {
+  color: var(--primary-color);
+  background-color: var(--bg-dark);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+/* Main Section */
+.main-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--bg-dark);
+}
+
+.section-title {
+  font-size: 36px;
+  color: var(--fg-light);
+  margin-bottom: 30px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.grid-item {
+  background-color: var(--bg-dark);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item .card {
+  display: inline-block;
+  text-align: center;
+}
+
+.grid-item .card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.grid-item h3 {
+  font-size: 22px;
+  color: var(--fg-light);
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  font-size: 16px;
+  color: var(--muted-color);
+}
+
+/* Chart Container */
+.chart-container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+/* Call to Action Button */
+.ctaRow {
+  margin-top: 30px;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--fg-light);
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--bg-dark);
+  padding: 20px 0;
+  color: var(--fg-light);
+  text-align: center;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.contact-icon {
+  font-size: 32px;
+  color: var(--fg-light);
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: var(--primary-color);
+}
+
+footer p {
+  margin-top: 20px;
+  color: var(--muted-color);
+}
+
+footer .wrap {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Scroll to top button styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3;
+}
+/* =========================
+   ETHICAL CHALLENGES UPGRADE
+   ========================= */
+
+.main-section { padding: 90px 0 70px; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 18px; }
+
+.eyebrow{
+  display:inline-block;
+  font-weight: 700;
+  letter-spacing:.28em;
+  text-transform: uppercase;
+  font-size:.78rem;
+  opacity:.85;
+  margin-bottom: 10px;
+}
+
+.ec-header{
+  display:grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 18px;
+  align-items:start;
+  margin-bottom: 24px;
+}
+
+.ec-lead{
+  opacity:.92;
+  line-height: 1.75;
+  font-size: 1.06rem;
+}
+
+.ec-panel{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  padding: 18px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.28);
+}
+
+.ec-panel-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ec-badge{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,188,212,.25);
+  background: rgba(0,188,212,.10);
+  font-weight: 800;
+}
+
+.ec-badge i{ color: #00bcd4; }
+
+.ec-meta{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  opacity: .9;
+}
+
+.ec-dot{
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: rgba(0,188,212,.9);
+  box-shadow: 0 0 14px rgba(0,188,212,.45);
+}
+
+.ec-facts{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px 0 12px;
+}
+
+.ec-fact{
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+  padding: 12px 10px;
+  text-align:center;
+}
+
+.ec-num{ font-weight: 900; font-size: 1.35rem; }
+.ec-lbl{ opacity:.85; font-size: .9rem; }
+
+.ec-panel-note{
+  margin: 0;
+  opacity: .9;
+  line-height: 1.55;
+}
+
+.ec-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.ec-card{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.22);
+  position: relative;
+  overflow: hidden;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.ec-card::after{
+  content:"";
+  position:absolute;
+  top:-60px;
+  right:-90px;
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(0,188,212,.12), transparent 70%);
+  transform: rotate(16deg);
+  pointer-events:none;
+}
+
+.ec-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  border-color: rgba(0,188,212,.35);
+}
+
+.ec-card-top{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.ec-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  border: 1px solid rgba(0,188,212,.25);
+  background: rgba(0,188,212,.10);
+}
+
+.ec-icon i{ color: #00bcd4; }
+
+.ec-desc{ opacity:.9; line-height: 1.6; margin: 0 0 12px 0; }
+
+.ec-mini{
+  border-top: 1px solid rgba(255,255,255,.10);
+  padding-top: 12px;
+}
+
+.ec-mini-row{
+  display:flex;
+  justify-content:space-between;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: .95rem;
+  line-height: 1.4;
+}
+
+.ec-tag{
+  flex: 0 0 auto;
+  font-weight: 800;
+  color: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: .8rem;
+}
+
+.ec-chartBlock{
+  display:grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 18px;
+  margin-top: 20px;
+  align-items:start;
+}
+
+.ec-checklist{
+  margin-top: 14px;
+  display:grid;
+  gap: 10px;
+}
+
+.ec-check{
+  display:flex;
+  gap: 10px;
+  align-items:flex-start;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.18);
+}
+
+.ec-check i{ color: #00bcd4; margin-top: 2px; }
+
+.ec-chartWrap{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.04);
+  padding: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.22);
+  min-height: 340px;
+}
+
+.ec-chartWrap canvas{
+  width: 100% !important;
+  height: 260px !important;
+}
+
+.ec-caption{
+  margin: 10px 0 0;
+  opacity: .85;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.ec-cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.ec-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  text-decoration:none;
+  font-weight: 800;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.ec-btn:hover{
+  transform: translateY(-2px);
+  background: rgba(0,188,212,.10);
+  border-color: rgba(0,188,212,.35);
+  box-shadow: 0 16px 32px rgba(0,0,0,.28);
+}
+
+.ec-btn.primary{
+  border-color: rgba(0,188,212,.35);
+  background: rgba(0,188,212,.14);
+}
+
+@media (max-width: 1020px){
+  .ec-header{ grid-template-columns: 1fr; }
+  .ec-grid{ grid-template-columns: repeat(2, 1fr); }
+  .ec-chartBlock{ grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px){
+  .ec-grid{ grid-template-columns: 1fr; }
+}
+/* ===== Fix cards looking weird (Impact/Example/Safeguard) ===== */
+
+/* 1) Make grid responsive so cards don’t become too narrow */
+.ec-grid, .grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+/* 2) Ensure card content is left-aligned */
+.ec-card, .grid-item .card{
+  text-align: left;
+}
+
+/* 3) Replace circle layout with a clean "label + value" layout */
+.ec-mini{
+  border-top: 1px solid rgba(255,255,255,.10);
+  padding-top: 12px;
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.ec-mini-row{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.ec-label{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  font-size: .82rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.92);
+}
+
+.ec-value{
+  color: rgba(255,255,255,.86);
+  line-height: 1.5;
+}
+
+/* 4) Extra spacing improvements (optional) */
+.ec-desc{
+  margin: 0;
+  color: rgba(255,255,255,.82);
+  line-height: 1.6;
+}
+
+/* Mobile tweak */
+@media (max-width: 520px){
+  .ec-mini-row{
+    grid-template-columns: 1fr;
+  }
+  .ec-label{
+    justify-content: flex-start;
+    width: fit-content;
+  }
+}
+/* ===== Ethical cards fix: make the lower part look clean ===== */
+
+/* Make cards responsive (avoid squished 4-column look) */
+.ec-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+/* Ensure content alignment is left */
+.ec-card{
+  text-align: left;
+}
+
+/* Replace the “stacked centered lines” with a dossier-like layout */
+.ec-mini{
+  border-top: 1px solid rgba(255,255,255,.10);
+  padding-top: 12px;
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.ec-mini-row{
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.ec-label{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+  font-size: .82rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.92);
+  width: fit-content;
+}
+
+.ec-value{
+  color: rgba(255,255,255,.86);
+  line-height: 1.5;
+}
+
+/* Improve text block spacing */
+.ec-desc{
+  margin: 0;
+  color: rgba(255,255,255,.82);
+  line-height: 1.6;
+}
+
+/* Mobile: stack label above text */
+@media (max-width: 520px){
+  .ec-mini-row{
+    grid-template-columns: 1fr;
+  }
+  .ec-label{
+    justify-content: flex-start;
+  }
+}

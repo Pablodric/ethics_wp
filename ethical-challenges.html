@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ethical Challenges of AI in Moderation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Keep your page-specific CSS -->
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div class="nav">
+    <div class="inner">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="human-impact.html">Human Impact</a>
+        <a href="ai-benefits.html">AI Benefits</a>
+        <a href="ethical-challenges.html">Ethical Challenges</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ethical Challenges -->
+  <section id="ethical-challenges" class="main-section">
+    <div class="wrap">
+
+      <div class="ec-header">
+        <div>
+          <div class="eyebrow">Ethical Risk Map</div>
+          <h2 class="section-title">Ethical Challenges of AI Moderation</h2>
+          <p class="ec-lead">
+            If the future is “AI as a shield,” then ethics becomes the control system.
+            These are the core risks that can turn protection into harm — and the safeguards that keep AI accountable.
+          </p>
+        </div>
+
+        <div class="ec-panel">
+          <div class="ec-panel-top">
+            <div class="ec-badge">
+              <i class="fas fa-gavel"></i>
+              <span>Governance First</span>
+            </div>
+            <div class="ec-meta">
+              <span class="ec-dot"></span>
+              <span>Safety without injustice</span>
+            </div>
+          </div>
+
+          <div class="ec-facts">
+            <div class="ec-fact">
+              <div class="ec-num">4</div>
+              <div class="ec-lbl">Core risks</div>
+            </div>
+            <div class="ec-fact">
+              <div class="ec-num">3</div>
+              <div class="ec-lbl">Safeguard layers</div>
+            </div>
+            <div class="ec-fact">
+              <div class="ec-num">1</div>
+              <div class="ec-lbl">Ethical goal</div>
+            </div>
+          </div>
+
+          <p class="ec-panel-note">
+            AI can reduce human trauma only if platforms provide transparency, appeal routes, and accountability for errors.
+          </p>
+        </div>
+      </div>
+
+      <!-- Grid Layout for challenges (FIXED) -->
+<div class="ec-grid">
+
+  <article class="ec-card">
+    <div class="ec-card-top">
+      <div class="ec-icon"><i class="fas fa-balance-scale"></i></div>
+      <h3>Fairness</h3>
+    </div>
+    <p class="ec-desc">AI can inherit biases from training data and enforce rules unevenly across groups.</p>
+
+    <div class="ec-mini">
+      <div class="ec-mini-row">
+        <span class="ec-label">Impact</span>
+        <span class="ec-value">Unequal enforcement, silencing, discrimination</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Example</span>
+        <span class="ec-value">Different outcomes for similar speech patterns or dialects</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Safeguard</span>
+        <span class="ec-value">Bias audits + diverse evaluation sets + human appeal</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="ec-card">
+    <div class="ec-card-top">
+      <div class="ec-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Privacy</h3>
+    </div>
+    <p class="ec-desc">Moderation needs signals, but collecting too much data risks surveillance and misuse.</p>
+
+    <div class="ec-mini">
+      <div class="ec-mini-row">
+        <span class="ec-label">Impact</span>
+        <span class="ec-value">Over-collection, profiling, sensitive data leakage</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Example</span>
+        <span class="ec-value">Scanning private content or storing unnecessary logs</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Safeguard</span>
+        <span class="ec-value">Data minimization + retention limits + strict access controls</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="ec-card">
+    <div class="ec-card-top">
+      <div class="ec-icon"><i class="fas fa-cogs"></i></div>
+      <h3>Transparency</h3>
+    </div>
+    <p class="ec-desc">Users need to understand why content was removed and how to contest decisions.</p>
+
+    <div class="ec-mini">
+      <div class="ec-mini-row">
+        <span class="ec-label">Impact</span>
+        <span class="ec-value">“Black-box” enforcement, distrust, chilling effects</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Example</span>
+        <span class="ec-value">Vague notices like “violated guidelines” without details</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Safeguard</span>
+        <span class="ec-value">Clear reasons + evidence traces + public reporting</span>
+      </div>
+    </div>
+  </article>
+
+  <article class="ec-card">
+    <div class="ec-card-top">
+      <div class="ec-icon"><i class="fas fa-users"></i></div>
+      <h3>Accountability</h3>
+    </div>
+    <p class="ec-desc">When AI makes mistakes, someone must be responsible — not just “the model”.</p>
+
+    <div class="ec-mini">
+      <div class="ec-mini-row">
+        <span class="ec-label">Impact</span>
+        <span class="ec-value">No remedy for harms, “automation blame shifting”</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Example</span>
+        <span class="ec-value">Wrongful bans with no review, slow or absent appeals</span>
+      </div>
+      <div class="ec-mini-row">
+        <span class="ec-label">Safeguard</span>
+        <span class="ec-value">Human oversight + SLAs for appeals + audit logs</span>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+
+      <!-- Chart + Explanation -->
+      <div class="ec-chartBlock">
+        <div class="ec-chartText">
+          <h3>Visualizing the Ethical Trade-offs</h3>
+          <p>
+            These categories overlap. Improving one often pressures another: stronger detection can increase privacy risks,
+            while greater transparency may expose moderation tactics to abuse. The goal is not perfection — it is a system
+            with <strong>checks, explanations, and remedies</strong>.
+          </p>
+
+          <div class="ec-checklist">
+            <div class="ec-check"><i class="fas fa-check-circle"></i><span>Appeals that are fast, meaningful, and accessible</span></div>
+            <div class="ec-check"><i class="fas fa-check-circle"></i><span>Bias evaluation across language, culture, and context</span></div>
+            <div class="ec-check"><i class="fas fa-check-circle"></i><span>Data minimization and strict retention policies</span></div>
+            <div class="ec-check"><i class="fas fa-check-circle"></i><span>Public transparency reports and internal audit logs</span></div>
+          </div>
+        </div>
+
+        <div class="ec-chartWrap">
+          <canvas id="ethicalChallengesChart" aria-label="Ethical challenges chart"></canvas>
+          <p class="ec-caption">
+            A simple risk snapshot (illustrative): transparency and fairness tend to dominate debates, but privacy and accountability remain critical.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="ec-cta">
+        <a class="ec-btn primary" href="ai-benefits.html"><i class="fas fa-robot"></i> Back to AI Benefits</a>
+        <a class="ec-btn" href="human-impact.html"><i class="fas fa-comment-dots"></i> Return to Human Impact</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Pablo Mateo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Chart.js — styled for dark UI
+    const ctx = document.getElementById('ethicalChallengesChart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Fairness', 'Privacy', 'Transparency', 'Accountability'],
+        datasets: [{
+          label: 'Ethical Risk Weight (illustrative)',
+          data: [30, 20, 35, 15],
+          borderWidth: 1,
+          backgroundColor: [
+            'rgba(0, 188, 212, 0.35)',
+            'rgba(0, 188, 212, 0.25)',
+            'rgba(0, 188, 212, 0.42)',
+            'rgba(0, 188, 212, 0.22)'
+          ],
+          borderColor: [
+            'rgba(0, 188, 212, 0.85)',
+            'rgba(0, 188, 212, 0.75)',
+            'rgba(0, 188, 212, 0.90)',
+            'rgba(0, 188, 212, 0.70)'
+          ],
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            ticks: { color: 'rgba(255,255,255,.85)' },
+            grid: { color: 'rgba(255,255,255,.08)' }
+          },
+          y: {
+            beginAtZero: true,
+            ticks: { color: 'rgba(255,255,255,.85)' },
+            grid: { color: 'rgba(255,255,255,.08)' }
+          }
+        },
+        plugins: {
+          legend: { display: false },
+          tooltip: { enabled: true }
+        }
+      }
+    });
+  </script>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

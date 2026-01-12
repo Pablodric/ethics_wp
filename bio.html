@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your Bio and Project</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- TensorFlow.js + Pretrained Toxicity model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity@1.2.2/dist/toxicity.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Bio Section -->
+    <section id="bio">
+      <div class="wrap">
+        <div class="sectionTitleRow">
+          <div>
+            <div class="eyebrow">Profile</div>
+            <h2>About Me</h2>
+            <p class="lead">
+              Hi, I’m <strong>Pablo Mateo</strong> — a researcher and student exploring the human and ethical impact of
+              <strong>AI-powered content moderation</strong>. I focus on what happens when “platform safety” depends on both
+              algorithms and people who repeatedly face disturbing material.
+            </p>
+          </div>
+
+          <div class="profileCard reveal">
+            <div class="profileTop">
+              <div class="profileBadge">
+                <i class="fas fa-shield-alt"></i>
+                <span>Ethics Lab</span>
+              </div>
+              <div class="profileMeta">
+                <span class="metaDot"></span>
+                <span>2026 • Ongoing</span>
+              </div>
+            </div>
+
+            <div class="profileFacts">
+              <div class="fact">
+                <div class="factNum" data-count="3">0</div>
+                <div class="factLbl">Core ethical risks</div>
+              </div>
+              <div class="fact">
+                <div class="factNum" data-count="7">0</div>
+                <div class="factLbl">Workflow steps mapped</div>
+              </div>
+              <div class="fact">
+                <div class="factNum" data-count="2">0</div>
+                <div class="factLbl">Human/AI lenses</div>
+              </div>
+            </div>
+
+            <div class="profileChips">
+              <span class="chip"><i class="fas fa-brain"></i> Human impact</span>
+              <span class="chip"><i class="fas fa-balance-scale"></i> Governance</span>
+              <span class="chip"><i class="fas fa-search"></i> Transparency</span>
+            </div>
+
+            <div class="profileActions">
+              <a class="miniBtn" href="mailto:yourname@example.com"><i class="fas fa-envelope"></i> Email</a>
+              <a class="miniBtn" href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a>
+              <a class="miniBtn" href="https://github.com/yourprofile" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bioGrid2">
+          <div class="glassCard reveal">
+            <h3><i class="fas fa-bullseye"></i> What I’m Working On</h3>
+            <p>
+              I examine how moderation decisions are made, where harms emerge (bias, false positives, over-removal),
+              and how we can design safer workflows that protect both users and moderators.
+            </p>
+          </div>
+
+          <div class="glassCard reveal">
+            <h3><i class="fas fa-layer-group"></i> Focus Areas</h3>
+            <ul class="cleanList">
+              <li>Human cost: stress, trauma exposure, burnout</li>
+              <li>Algorithmic bias & fairness in automated enforcement</li>
+              <li>Transparency, accountability, explainability</li>
+              <li>Governance: policies, appeals, oversight</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project">
+      <div class="wrap">
+        <div class="projectHeader">
+          <div>
+            <div class="eyebrow">Research</div>
+            <h2>About My Project</h2>
+            <p class="lead">
+              This project explores the ethical implications of using AI for content moderation. AI can detect harmful content
+              at scale, but it also creates dilemmas: bias, transparency failures, and the hidden human cost behind “safe platforms”.
+            </p>
+
+            <div class="projectPills">
+              <span class="pill"><i class="fas fa-exclamation-triangle"></i> Harm & safety</span>
+              <span class="pill"><i class="fas fa-equals"></i> Fairness & bias</span>
+              <span class="pill"><i class="fas fa-eye"></i> Transparency</span>
+              <span class="pill"><i class="fas fa-user-shield"></i> Human moderators</span>
+            </div>
+          </div>
+
+          <div class="projectPanel reveal">
+            <div class="panelTop">
+              <div class="panelTitle">
+                <i class="fas fa-folder-open"></i>
+                <span>Project Deliverables</span>
+              </div>
+              <div class="panelHint">Quick access</div>
+            </div>
+
+            <div class="panelActions">
+              <a href="ethics.pdf" download class="ethics-btn">
+                <i class="fas fa-file-powerpoint"></i> Download Ethics PPT
+              </a>
+
+              <a
+                class="secondary-btn"
+                href="https://youtu.be/hpBck-meiDw?si=yN6y_sjzM9uEY18n"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-youtube"></i> Watch Overview Video
+              </a>
+
+              <button class="secondary-btn" type="button" id="openDemo">
+                <i class="fas fa-bolt"></i> Live Demo
+              </button>
+            </div>
+
+            <div class="panelNote">
+              <i class="fas fa-info-circle"></i>
+              The goal is not only efficiency — it’s reducing harm without creating new injustice.
+            </div>
+          </div>
+        </div>
+
+        <div class="projectGrid">
+          <div class="glassCard reveal">
+            <h3><i class="fas fa-flag-checkered"></i> Project Goals</h3>
+            <ul class="cleanList">
+              <li>Investigate the ethical challenges of using AI in content moderation.</li>
+              <li>Propose solutions to mitigate bias and harm in moderation algorithms.</li>
+              <li>Highlight the human cost of training AI with disturbing content.</li>
+            </ul>
+          </div>
+
+          <div class="glassCard reveal">
+            <h3><i class="fas fa-question-circle"></i> Key Questions</h3>
+            <ul class="cleanList">
+              <li>Who pays the psychological cost when “safety” is produced at scale?</li>
+              <li>How do we audit bias and explain why content is removed?</li>
+              <li>How can AI reduce harm without erasing accountability?</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="workflowTitle">Project Workflow</h3>
+
+        <div class="workflow workflowEnhanced">
+          <div class="workflow-stage reveal">
+            <div class="workflowStep">01</div>
+            <div class="workflow-icon"><i class="fas fa-user"></i></div>
+            <h4>Human Problem</h4>
+            <p>Exposure, stress, trauma — the invisible cost of moderation.</p>
+          </div>
+
+          <div class="workflow-stage reveal">
+            <div class="workflowStep">02</div>
+            <div class="workflow-icon"><i class="fas fa-robot"></i></div>
+            <h4>AI as a Shield</h4>
+            <p>Filtering and triage to reduce what reaches human eyes.</p>
+          </div>
+
+          <div class="workflow-stage reveal">
+            <div class="workflowStep">03</div>
+            <div class="workflow-icon"><i class="fas fa-dollar-sign"></i></div>
+            <h4>Economic Costs</h4>
+            <p>Infrastructure, labeling pipelines, and ongoing model updates.</p>
+          </div>
+
+          <div class="workflow-stage reveal">
+            <div class="workflowStep">04</div>
+            <div class="workflow-icon"><i class="fas fa-balance-scale"></i></div>
+            <h4>Ethical Concerns</h4>
+            <p>False positives, censorship risk, and uneven enforcement.</p>
+          </div>
+
+          <div class="workflow-stage reveal">
+            <div class="workflowStep">05</div>
+            <div class="workflow-icon"><i class="fas fa-gavel"></i></div>
+            <h4>Bias & Power</h4>
+            <p>Training data shapes “truth” — and shapes who gets silenced.</p>
+          </div>
+
+          <div class="workflow-stage reveal">
+            <div class="workflowStep">06</div>
+            <div class="workflow-icon"><i class="fas fa-globe-americas"></i></div>
+            <h4>Social Impact</h4>
+            <p>Trust, public discourse, and how safety norms evolve online.</p>
+          </div>
+
+          <div class="workflow-stage reveal">
+            <div class="workflowStep">07</div>
+            <div class="workflow-icon"><i class="fas fa-search"></i></div>
+            <h4>Critical Conclusion</h4>
+            <p>Balance scale, fairness, and human protection — not tradeoffs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Demo Modal -->
+    <div class="demoModal" id="demoModal" aria-hidden="true">
+      <div class="demoModalBackdrop" id="closeDemo"></div>
+
+      <div class="demoModalContent" role="dialog" aria-modal="true" aria-label="Live demo">
+        <div class="demoModalTop">
+          <div class="panelTitle">
+            <i class="fas fa-bolt"></i><span>Live Demo — Safe Triage Simulation</span>
+          </div>
+          <button class="videoClose" type="button" id="closeDemoBtn" aria-label="Close demo">✕</button>
+        </div>
+
+        <p class="panelNote" style="margin-top: 0;">
+          <i class="fas fa-info-circle"></i>
+          This is a simplified, safe demo. It shows how AI triage can reduce human exposure by escalating only uncertain/high-risk cases.
+        </p>
+
+        <label class="demoLabel" for="demoInput">Try a message:</label>
+        <textarea
+          id="demoInput"
+          class="demoInput"
+          rows="4"
+          placeholder="Type a message (keep it safe; the model detects toxicity-related signals)"
+        ></textarea>
+
+        <div class="demoActions" style="align-items: center;">
+          <button class="miniBtn" type="button" id="runDemo">
+            <i class="fas fa-play"></i> Predict
+          </button>
+
+          <button class="miniBtn" type="button" id="clearDemo">
+            <i class="fas fa-undo"></i> Clear
+          </button>
+
+          <div class="thresholdWrap" style="margin-left: auto;">
+            <span class="resultTag">Threshold</span>
+            <input id="toxThreshold" type="range" min="0.50" max="0.95" step="0.01" value="0.70" />
+            <span id="toxThresholdVal" class="resultVal" style="min-width: 52px; display: inline-block;">0.70</span>
+          </div>
+        </div>
+
+        <div class="demoResult" aria-live="polite">
+          <div class="resultRow">
+            <span class="resultTag">Model</span>
+            <span class="resultVal" id="modelStatus">Loading model…</span>
+          </div>
+          <div class="resultRow">
+            <span class="resultTag">Decision</span>
+            <span class="resultVal" id="demoDecision">—</span>
+          </div>
+          <div class="resultRow">
+            <span class="resultTag">Reason</span>
+            <span class="resultVal" id="demoReason">—</span>
+          </div>
+        </div>
+
+        <div class="glassCard" style="margin-top: 12px;">
+          <h3 style="margin: 0 0 10px 0;"><i class="fas fa-chart-bar"></i> Predictions</h3>
+          <div id="predGrid" class="predGrid">
+            <!-- filled by JS -->
+          </div>
+          <p class="bioNote" style="margin-top: 12px;">
+            <strong>Note:</strong> This demo uses a pretrained toxicity model. It can be wrong and may encode bias.
+            Use it to illustrate “AI triage”, not as a final moderation authority.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

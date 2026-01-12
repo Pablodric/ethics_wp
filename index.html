@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI-Powered Social Media Moderation: Ethics and Human Cost</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <div class="nav">
+    <div class="inner">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="bio.html">Project</a>
+        <a href="human-impact.html">Human Impact</a>
+        <a href="ai-benefits.html">AI Benefits</a>
+        <a href="ethical-challenges.html">Ethical Challenges</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress" aria-hidden="true">
+    <span id="bar"></span>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="wrap heroGrid">
+      <div>
+        <div class="eyebrow">2026 • Ethics Lab</div>
+        <h1>AI-Powered Content Moderation<br/>Ethics and Human Cost</h1>
+        <p class="sub">
+          AI can protect human moderators from trauma — but it can also create new harms: bias, opacity, and unfair enforcement.
+          This project connects the human story with the ethical questions behind “safety at scale”.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="bio.html"><i class="fas fa-folder-open"></i> Open the Project</a>
+          
+        </div>
+
+        <!-- counters (works with your data-count JS) -->
+        <div class="miniStats reveal" style="margin-top:18px;">
+          <div class="statPill">
+            <span class="statNum" data-count="3">0</span>
+            <span class="statLbl">Core risks</span>
+          </div>
+          <div class="statPill">
+            <span class="statNum" data-count="7">0</span>
+            <span class="statLbl">Workflow steps</span>
+          </div>
+          <div class="statPill">
+            <span class="statNum" data-count="2">0</span>
+            <span class="statLbl">Lenses</span>
+          </div>
+        </div>
+      </div>
+      <div class="mock" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Pathways / Entry Points (RESTRUCTURED) -->
+<section id="overview" class="pathways">
+  <div class="wrap">
+
+    <div class="pathHeader">
+      <div>
+        <div class="eyebrow">Start Here</div>
+        <h2>Choose your path</h2>
+        <p class="lead">
+          This project is structured like a short guided tour. Start with the human story, then explore why AI can help,
+          and finally look at the ethical safeguards that make “AI as a shield” possible.
+        </p>
+      </div>
+
+      <div class="pathMiniPanel reveal">
+        <div class="pathMiniTop">
+          <div class="pathMiniBadge"><i class="fas fa-route"></i> Recommended order</div>
+          <div class="pathMiniMeta"><span class="metaDot"></span> 3 steps</div>
+        </div>
+        <ol class="pathMiniList">
+          <li><strong>Human Impact</strong> — the cost</li>
+          <li><strong>AI Benefits</strong> — the promise</li>
+          <li><strong>Ethical Challenges</strong> — the safeguards</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="pathGrid">
+
+      <a class="pathCard reveal start" href="human-impact.html">
+        <div class="pathTop">
+          <span class="pathTag">Start here</span>
+          <span class="pathIcon"><i class="fas fa-user-shield"></i></span>
+        </div>
+        <h3>Human Impact</h3>
+        <p>Invisible labor, trauma exposure, and the psychological cost of moderation.</p>
+        <div class="pathCTA">Open the transcript →</div>
+      </a>
+
+      <a class="pathCard reveal" href="ai-benefits.html">
+        <div class="pathTop">
+          <span class="pathTag subtle">Step 2</span>
+          <span class="pathIcon"><i class="fas fa-robot"></i></span>
+        </div>
+        <h3>AI Benefits</h3>
+        <p>Scaling decisions, filtering harm, and reducing what reaches human eyes.</p>
+        <div class="pathCTA">See the benefits →</div>
+      </a>
+
+      <a class="pathCard reveal" href="ethical-challenges.html">
+        <div class="pathTop">
+          <span class="pathTag subtle">Step 3</span>
+          <span class="pathIcon"><i class="fas fa-balance-scale"></i></span>
+        </div>
+        <h3>Ethical Challenges</h3>
+        <p>Bias, transparency gaps, privacy trade-offs, and accountability when content is removed.</p>
+        <div class="pathCTA">Explore the dilemmas →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+<!-- Reader Pulse / Feedback (NEW) -->
+<section id="pulse" class="pulse">
+  <div class="wrap">
+    <div class="sectionTitleRow">
+      <div>
+        <div class="eyebrow">Pulse Check</div>
+        <h2>What should “safe moderation” prioritize?</h2>
+        <p class="lead">
+          Choose the option that feels most important to you. You can also leave a short anonymous note.
+          This is a local demo (stored only in your browser).
+        </p>
+      </div>
+
+      <div class="pulseMini reveal">
+        <div class="pulseMiniTop">
+          <div class="pulseMiniBadge"><i class="fas fa-comment-dots"></i> Live feedback</div>
+          <div class="pulseMiniMeta"><span class="metaDot"></span> anonymous</div>
+        </div>
+
+        <div class="pulseStats">
+          <div class="pulseStat">
+            <div class="pulseNum" id="voteTotal">0</div>
+            <div class="pulseLbl">total votes</div>
+          </div>
+          <div class="pulseStat">
+            <div class="pulseNum" id="topChoice">—</div>
+            <div class="pulseLbl">top priority</div>
+          </div>
+        </div>
+
+        <p class="pulseNote">
+          Your choice will suggest the best next page to open.
+        </p>
+      </div>
+    </div>
+
+    <div class="pulseGrid">
+      <button class="pulseOption reveal" data-choice="Human wellbeing">
+        <div class="pulseOptionTop">
+          <span class="pulseIcon"><i class="fas fa-heart"></i></span>
+          <span class="pulseTitle">Human wellbeing</span>
+        </div>
+        <p>Reduce human exposure to traumatic content — even if it costs more.</p>
+        <div class="pulseBar"><span id="barWellbeing"></span></div>
+      </button>
+
+      <button class="pulseOption reveal" data-choice="Fairness & appeals">
+        <div class="pulseOptionTop">
+          <span class="pulseIcon"><i class="fas fa-balance-scale"></i></span>
+          <span class="pulseTitle">Fairness & appeals</span>
+        </div>
+        <p>Clear explanations, meaningful appeals, and equal treatment across groups.</p>
+        <div class="pulseBar"><span id="barFairness"></span></div>
+      </button>
+
+      <button class="pulseOption reveal" data-choice="Speed & safety">
+        <div class="pulseOptionTop">
+          <span class="pulseIcon"><i class="fas fa-bolt"></i></span>
+          <span class="pulseTitle">Speed & safety</span>
+        </div>
+        <p>Remove harmful content fast and prevent it from spreading widely.</p>
+        <div class="pulseBar"><span id="barSpeed"></span></div>
+      </button>
+    </div>
+
+    <div class="pulseForm reveal">
+      <div class="pulseFormLeft">
+        <h3><i class="fas fa-pen"></i> Leave a one-sentence note (optional)</h3>
+        <p class="muted">
+          Your note is stored locally in your browser (demo). Keep it short.
+        </p>
+
+        <textarea id="pulseNoteInput" class="demoInput" rows="3"
+          placeholder="Example: Platforms should protect moderators first — AI should be a shield, not a shortcut."></textarea>
+
+        <div class="demoActions">
+          <button class="miniBtn" type="button" id="savePulseNote">
+            <i class="fas fa-save"></i> Save note
+          </button>
+          <button class="miniBtn" type="button" id="clearPulseNote">
+            <i class="fas fa-trash"></i> Clear
+          </button>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
+  <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+  <footer>
+    <div class="wrap">
+      <h3>Contact Information</h3>
+      <div class="contact-icons">
+        <a href="mailto:yourname@example.com" target="_blank" class="contact-icon" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank" class="contact-icon" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/yourprofile" target="_blank" class="contact-icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p>&copy; 2026 Pablo Mateo. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
